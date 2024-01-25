@@ -15,6 +15,6 @@ public class FilmRepository(ApplicationDbContext context) : GenericRepository<Fi
 			.Include(film => film.Reviews)
 			.Include(film => film.FilmActors)
 			.ThenInclude(filmActor => filmActor.Actor)
-			.FirstOrDefaultAsync(p => p.Id == id);
+			.FirstOrDefaultAsync(film => film.Id == id);
 	}
 }
