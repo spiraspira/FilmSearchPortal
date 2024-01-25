@@ -9,6 +9,8 @@ public static class DataAccessRegister
 			options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
 		});
 
+		services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 		services.AddScoped<IActorRepository, ActorRepository>();
 
 		services.AddScoped<IFilmRepository, IFilmRepository>();
