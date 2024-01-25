@@ -11,4 +11,6 @@ public class Film : Entity
 	public TimeSpan Duration { get; set; }
 
 	public List<FilmActor> FilmActors { get; set; } = [];
+
+	public List<Review> Reviews { get; set; } = [];
 }
