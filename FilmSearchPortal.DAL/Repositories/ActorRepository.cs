@@ -14,8 +14,8 @@ public class ActorRepository(ApplicationDbContext context) : GenericRepository<A
 	public override Task<Actor?> Get(Guid id)
 	{
 		return Set
-			.Include(film => film.FilmActors)
+			.Include(actor => actor.FilmActors)
 			.ThenInclude(filmActor => filmActor.Film)
-			.FirstOrDefaultAsync(film => film.Id == id);
+			.FirstOrDefaultAsync(actor => actor.Id == id);
 	}
 }
