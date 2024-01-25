@@ -8,4 +8,13 @@ public class FilmRepository(ApplicationDbContext context) : GenericRepository<Fi
 			.Where(film => film.Title != null && film.Title.Contains(query))
 			.ToListAsync();
 	}
+
+	public override Task<Film?> Get(Guid id)
+	{
+		return Set
+			.Include(film => film.Reviews)
+			.Include(film => film.FilmActors)
+			.ThenInclude(filmActor => filmActor.Actor)
+			.FirstOrDefaultAsync(p => p.Id == id);
+	}
 }
