@@ -8,5 +8,7 @@ public class Film : Entity
 
 	public int? ReleaseYear { get; set; }
 
-	public TimeSpan? Duration { get; set; }
+	public TimeSpan Duration { get; set; }
+
+	public List<FilmActor> FilmActors { get; set; } = [];
 }
