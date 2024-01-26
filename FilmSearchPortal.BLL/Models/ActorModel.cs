@@ -11,4 +11,6 @@ public class ActorModel
 	public DateTime DateOfBirth { get; set; }
 
 	public string? Biography { get; set; }
+
+	public List<FilmActorModel> FilmActors { get; set; } = [];
 }

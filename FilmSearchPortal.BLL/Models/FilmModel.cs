@@ -11,4 +11,6 @@ public class FilmModel
 	public int? ReleaseYear { get; set; }
 
 	public TimeSpan Duration { get; set; }
+
+	public List<FilmActorModel> FilmActors { get; set; } = [];
 }
