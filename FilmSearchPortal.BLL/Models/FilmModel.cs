@@ -1,9 +1,7 @@
 ﻿namespace FilmSearchPortal.BLL.Models;
 
-public class FilmModel
+public class FilmModel : Model
 {
-	public Guid? Id { get; set; }
-
 	public string? Title { get; set; }
 
 	public string? Description { get; set; }
