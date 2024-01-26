@@ -4,3 +4,4 @@ global using AutoMapper;
 global using FilmSearchPortal.BLL.Interfaces;
 global using FilmSearchPortal.BLL.Models;
 global using FilmSearchPortal.DAL.Entities;
+global using FilmSearchPortal.DAL.Interfaces;
