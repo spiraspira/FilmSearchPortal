@@ -1,9 +1,4 @@
-﻿using FilmSearchPortal.BLL.Services;
-using FilmSearchPortal.DAL.DI;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace FilmSearchPortal.BLL.DI;
+﻿namespace FilmSearchPortal.BLL.DI;
 
 public static class BusinessLogicRegister
 {
