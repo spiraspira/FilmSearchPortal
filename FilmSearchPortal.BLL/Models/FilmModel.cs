@@ -13,4 +13,6 @@ public class FilmModel
 	public TimeSpan Duration { get; set; }
 
 	public List<FilmActorModel> FilmActors { get; set; } = [];
+
+	public List<ReviewModel> Reviews { get; set; } = [];
 }
