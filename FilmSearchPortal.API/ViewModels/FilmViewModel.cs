@@ -11,4 +11,6 @@ public class FilmViewModel
 	public int? ReleaseYear { get; set; }
 
 	public TimeSpan Duration { get; set; }
+
+	public List<FilmActorViewModel> FilmActors { get; set; } = [];
 }
