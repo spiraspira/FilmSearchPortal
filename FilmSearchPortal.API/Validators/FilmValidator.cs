@@ -1,6 +1,6 @@
 ﻿namespace FilmSearchPortal.API.Validators;
 
-public class FilmValidator : AbstractValidator<FilmModel>
+public class FilmValidator : AbstractValidator<FilmViewModel>
 {
 	public FilmValidator()
 	{

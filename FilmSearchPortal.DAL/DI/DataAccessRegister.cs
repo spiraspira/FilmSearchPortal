@@ -13,7 +13,7 @@ public static class DataAccessRegister
 
 		services.AddScoped<IActorRepository, ActorRepository>();
 
-		services.AddScoped<IFilmRepository, IFilmRepository>();
+		services.AddScoped<IFilmRepository, FilmRepository>();
 
 		services.AddScoped<IReviewRepository, ReviewRepository>();
 	}
