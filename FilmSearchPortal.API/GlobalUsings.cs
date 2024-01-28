@@ -13,3 +13,5 @@ global using FilmSearchPortal.BLL.Models;
 global using FluentValidation;
 global using Microsoft.AspNetCore.Mvc;
 global using Newtonsoft.Json;
+global using Serilog;
+global using Serilog.Events;
