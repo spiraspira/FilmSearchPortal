@@ -1,8 +1,8 @@
 ﻿namespace FilmSearchPortal.API.Middleware;
 
-public class ExceptionHandlerMiddleware(RequestDelegate next)
+public class ExceptionHandlerMiddleware(RequestDelegate next, ILogger<ExceptionHandlerMiddleware> logger)
 {
-	public async Task InvokeAsync(HttpContext context, ILogger<ExceptionHandlerMiddleware> logger)
+	public async Task InvokeAsync(HttpContext context)
 	{
 		try
 		{
@@ -12,8 +12,6 @@ public class ExceptionHandlerMiddleware(RequestDelegate next)
 		{
 			const int statusCode = (int)HttpStatusCode.InternalServerError;
 
-			Log.Error(ex, "An unhandled exception occurred");
-
 			var result = JsonConvert.SerializeObject(new
 			{
 				StatusCode = statusCode,
@@ -21,7 +19,11 @@ public class ExceptionHandlerMiddleware(RequestDelegate next)
 			});
 
 			context.Response.ContentType = "application/json";
+
 			context.Response.StatusCode = statusCode;
+
+			logger.LogError(ex, "An unhandled exception occurred: {ExceptionMessage}", ex.Message);
+
 			await context.Response.WriteAsync(result);
 		}
 	}

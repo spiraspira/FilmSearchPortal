@@ -23,7 +23,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ExceptionHandlerMiddleware>();
-app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
 app.MapControllers();
