@@ -10,6 +10,8 @@ public static class BusinessLogicRegister
 
 		services.AddScoped<IGenericService<ReviewModel>, GenericService<ReviewModel, Review>>();
 
+		services.AddScoped<IGenericService<FilmActorModel>, GenericService<FilmActorModel, FilmActor>>();
+
 		services.AddDataAccess(config);
 	}
 }
