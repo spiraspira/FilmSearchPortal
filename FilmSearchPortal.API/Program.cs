@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(MappingProfile), typeof(FilmSearchPortal.BLL.Mapper.MappingProfile));
 builder.Services.AddBusinessLogic(builder.Configuration);
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSerilog();
 builder.Services.AddSwaggerGen();

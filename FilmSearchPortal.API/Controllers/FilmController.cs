@@ -15,9 +15,9 @@ public class FilmController(
 	}
 
 	[HttpGet("search/{title}")]
-	public async Task<FilmViewModel> GetFilmsByName(string title)
+	public async Task<IEnumerable<FilmViewModel>> GetFilmsByName(string title)
 	{
-		return mapper.Map<FilmViewModel>(await filmService.GetFilmsByTitle(title));
+		return mapper.Map<IEnumerable<FilmViewModel>>(await filmService.GetFilmsByTitle(title));
 	}
 
 	[HttpGet]
