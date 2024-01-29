@@ -1,4 +1,3 @@
-## 
 |   | Technical tools       |   | Expectations           |   | Advantages                                            |
 | - | --------------------- | - | ---------------------- | - | ----------------------------------------------------- |
 | + | .NET 8                | + | OOP                    | - | Docker                                                |
@@ -9,4 +8,11 @@
 | + | xUnit                 | + | Dependency Injection   | - | Auth based on social providers (for ex. Google)       |
 |   |                       | + | EF Migrations          | - | React/Angular/Vue/Blazor                              |
 |   |                       | + | Many-to-Many relations |   |                                                       |
-|   |                       | - | Unit Tests             |   |                                                       |
+|   |                       | + | Unit Tests             |   |                                                       |
+
+|   | Models                |   | Endpoints              |   | Relationships                                         |
+| - | --------------------- | - | ---------------------- | - | ----------------------------------------------------- |
+| + | Actor                 | + | Actor CRUD op.         | + | Several actors can play a role in one film            |
+| + | Film                  | + | Film CRUD op.          | + | An actor can play roles in several films              |
+| + | FilmActor             | + | FilmActor CRUD op.     | + | Multiple reviews can be placed for one film           |
+| + | Review                | + | Review CRUD op.        |   |                                                       |
